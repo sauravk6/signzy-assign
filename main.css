@@ -1,0 +1,113 @@
+#snackbar {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 250px; /* Set a default minimum width */
+    margin-left: -125px; /* Divide value of min-width by 2 */
+    background-color: #333; /* Black background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 50%; /* Center the snackbar */
+    bottom: 30px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+    visibility: visible; /* Show the snackbar */
+
+/* Add animation: Take 0.5 seconds to fade in and out the snackbar. 
+However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+.main-container{
+	padding: 10px 100px 30px 100px;
+	background-image: url('https://putsmail.com/assets/putsmail-bg-51e2404f51faac32b14774454cc0e585.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: inline-block;
+	width: 100%;
+	min-height: 800px;
+}
+.child-container{
+	max-width:600px;
+	width:100%;
+	margin: 0 auto;
+}
+@media(max-width: 768px){
+	.main-container{
+		padding: 30px 10px;
+	}
+}
+label{
+	margin-top: 20px;
+	color: #fff;
+}
+.tiny-label{
+	margin: 0;
+	font-size: 12px;
+	color:#fff;
+	font-weight: 200;
+}
+.btn-full-width{
+	width:100%;
+	margin-top: 30px;
+}
+.message-div{
+	padding: 30px;
+	padding-top: 0;
+	margin-top: 0;
+	text-align: center;
+	background: transparent;
+	color: #fff;
+	display: none;
+	/* margin-top: 30px; */
+}
+
+.cta-btn{
+	font-size: 1.125em;
+    margin: 12px 0;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    color: #6c797a;
+	border: 3px transparent solid;
+    background-clip: padding-box;
+    background-color: #fff;
+    padding: 20px 40px;
+    border: 1px solid;
+    display: inline-block;
+    transition: all .3s ease;
+}
+.cta-btn:hover{
+    background-color: transparent;
+    color: #fff;
+
+}
+
+.pad-t-md{
+	padding: 20px;
+}
